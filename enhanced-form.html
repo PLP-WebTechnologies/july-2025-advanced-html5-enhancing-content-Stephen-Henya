@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content & Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        header, main, footer {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        fieldset {
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #999;
+            border-radius: 5px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin: 5px 0 2px;
+        }
+        input, select, textarea {
+            padding: 8px;
+            width: 100%;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: auto;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HTML5 Content & Form Example</h1>
+    <p>This page demonstrates lists, tables, media embedding, and a complete HTML5 form with built-in validation.</p>
+</header>
+
+<main>
+    <!-- Lists Section -->
+    <section>
+        <h2>Top 3 Web Development Skills</h2>
+        <ol>
+            <li>HTML5 & Semantic Markup</li>
+            <li>CSS3 Styling & Responsive Design</li>
+            <li>JavaScript & DOM Manipulation</li>
+        </ol>
+
+        <h3>Popular Development Tools</h3>
+        <ul>
+            <li>Visual Studio Code</li>
+            <li>Git & GitHub</li>
+            <li>Chrome DevTools</li>
+        </ul>
+
+        <h3>Key Terms</h3>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Hypertext Markup Language used to structure content on the web.</dd>
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets used for visual styling.</dd>
+            <dt>JavaScript</dt>
+            <dd>Programming language for interactive web pages.</dd>
+        </dl>
+    </section>
+
+    <!-- Table Section -->
+    <section>
+        <h2>HTML5 Input Types Overview</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Input Type</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>email</td>
+                    <td>Validates for a proper email format</td>
+                    <td><input type="email" placeholder="example@mail.com"></td>
+                </tr>
+                <tr>
+                    <td>date</td>
+                    <td>Allows date selection</td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td>number</td>
+                    <td>Accepts numeric input only</td>
+                    <td><input type="number" min="0" max="10"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Media Section -->
+    <section>
+        <h2>Media Examples</h2>
+        <figure>
+            <img src="https://via.placeholder.com/300x150" alt="Placeholder Image" width="300">
+            <figcaption>Sample placeholder image.</figcaption>
+        </figure>
+
+        <figure>
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <figcaption>Sample audio file.</figcaption>
+        </figure>
+
+        <figure>
+            <video width="320" controls>
+                <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <figcaption>Sample video file.</figcaption>
+        </figure>
+    </section>
+
+    <!-- HTML5 Form Section -->
+    <section>
+        <h2>Registration Form</h2>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="John Doe" required minlength="3">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="0712345678" pattern="[0-9]{10}" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Account Details</legend>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required minlength="5" maxlength="15">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required minlength="6">
+
+                <label for="confirm">Confirm Password:</label>
+                <input type="password" id="confirm" name="confirm" required minlength="6">
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences</legend>
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="">--Select--</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                </select>
+
+                <label>Subscribe to newsletter?</label>
+                <input type="radio" id="yes" name="newsletter" value="yes" required>
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="newsletter" value="no">
+                <label for="no">No</label>
+
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" name="bio" rows="4" placeholder="Tell us something about yourself"></textarea>
+            </fieldset>
+
+            <input type="submit" value="Submit Form">
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 HTML5 Assignment Example. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
